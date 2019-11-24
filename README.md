@@ -16,14 +16,14 @@ pip install cloud-ocr
 
 首先需要申请对应平台的调用密钥
  - 百度 (https://console.bce.baidu.com/ai/)
- - 讯飞 
+ - 讯飞 (https://console.xfyun.cn/app/myapp)
 
 ```python
 from cloud_ocr import *
 
 # use xunfei (需将外网ip添加到讯飞api控制台白名单)
 client = XunFeiOcr(app_id, app_key)
-client.analyze(image_path)
+print(client.analyze(img_path))
 
 # use baidu api, url可选择general(默认), basicGeneral, basicAccurate,  accurate几个选项
 client = BaiduOcr(app_id, api_key, secret_key)
